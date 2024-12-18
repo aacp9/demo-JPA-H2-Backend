@@ -7,6 +7,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "contrato")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Contrato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

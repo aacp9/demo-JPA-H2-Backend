@@ -11,8 +11,6 @@ import java.util.Set;
 @Entity
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "plan")
 public class Plan {
     @Id

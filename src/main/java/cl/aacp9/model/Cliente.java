@@ -12,8 +12,6 @@ import java.util.Set;
 @Entity
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "cliente")
 public class Cliente {
     @Id
@@ -27,7 +25,7 @@ public class Cliente {
     private Boolean estado;
 
     //1:n con tabla contrato
-    @OneToMany(mappedBy = "cliente") //nombre del atributo en la clase Contrato que hara la relacion
+    @OneToMany(mappedBy = "cliente") //nombre del atributo en  Contrato que hara la relacion
     private Set<Contrato> contratos;
 
 
