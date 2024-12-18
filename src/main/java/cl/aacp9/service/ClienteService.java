@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ClienteService {
     public List<Cliente> findAll();
-    public List<Cliente> findAllEnabled();
+ //   public List<Cliente> findAllEnabled();
     public Cliente findByRun(String run);
     public Cliente save(Cliente cliente);
     public Optional<Cliente> findById(Integer id);

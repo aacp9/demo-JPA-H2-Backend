@@ -14,12 +14,12 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 //    public List<ClienteDto> findAllClienteDto();
 
     Cliente findByRun (String run);
-
-    @Query(value="SELECT new cl.aacp9.model.Cliente(id, nombre, apellido, run, direccion, fechaNacimiento, estado) " +
+/*
+    @Query(value="SELECT new cl.aacp9.model.Cliente(id, nombre, apellido, run, direccion, fechaNacimiento, estado, ) " +
                  "FROM Cliente " +
                  "WHERE estado=true")
     List<Cliente> findAllEnabled();
-
+*/
     //metodos ya incluidos en JPA
     /*
     * save

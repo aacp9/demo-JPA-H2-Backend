@@ -78,7 +78,7 @@ public class ClienteController {
         }
 
     }
-
+/*
     @GetMapping("/findAllEnabled")
     public ResponseEntity<List<Cliente>> findAllEnabled() {
         try {
@@ -96,7 +96,7 @@ public class ClienteController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+*/
 
     @PutMapping("/update")
     public ResponseEntity<Cliente> update(@RequestBody Cliente cliente) {
