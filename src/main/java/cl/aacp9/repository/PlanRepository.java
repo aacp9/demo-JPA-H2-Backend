@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PlanRepository extends JpaRepository<Plan, Integer> {
+public interface PlanRepository extends JpaRepository<Plan, Long> {
     /*
     @Query(value="SELECT new cl.aacp9.model.Plan(id, nombre, precio, servicio, estado)" +
                  "FROM Plan " +

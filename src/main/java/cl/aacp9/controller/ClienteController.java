@@ -64,7 +64,7 @@ public class ClienteController {
     }
 
     @GetMapping("/id/{id}")
-    public ResponseEntity<Optional<Cliente>> findById(@PathVariable Integer id) {//tambien se puede usar @RequestParam, se envìa en json
+    public ResponseEntity<Optional<Cliente>> findById(@PathVariable Long id) {//tambien se puede usar @RequestParam, se envìa en json
         try {
 //            System.out.println("valor de id: "+ id);
             Optional<Cliente> cliente=clienteService.findById(id);
@@ -78,11 +78,11 @@ public class ClienteController {
         }
 
     }
-/*
-    @GetMapping("/findAllEnabled")
-    public ResponseEntity<List<Cliente>> findAllEnabled() {
+
+    @GetMapping("/estado/{estado}")
+    public ResponseEntity<List<Cliente>> findAllByEstado(@PathVariable Boolean estado) {
         try {
-            List<Cliente> listEnabled=clienteService.findAllEnabled();
+            List<Cliente> listEnabled=clienteService.findAllByEstado(estado);
             //consultamos valor obtenido
             if(!listEnabled.isEmpty()){
                 //retornamos las lista y un estatus de ok
@@ -96,7 +96,7 @@ public class ClienteController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-*/
+
 
     @PutMapping("/update")
     public ResponseEntity<Cliente> update(@RequestBody Cliente cliente) {

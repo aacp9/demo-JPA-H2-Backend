@@ -26,7 +26,7 @@ public class PlanServiceImpl implements PlanService {
 
 
     @Override
-    public Optional<Plan> findById(int id) {
+    public Optional<Plan> findById(Long id) {
         return planRepository.findById(id);
     }
 

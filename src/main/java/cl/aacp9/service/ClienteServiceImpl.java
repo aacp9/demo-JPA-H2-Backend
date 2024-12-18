@@ -19,12 +19,12 @@ public class ClienteServiceImpl implements ClienteService{
         //aca se realiza las validaciones no en el controller
         return clienteRepository.findAll();
     }
-/*
+
     @Override
-    public List<Cliente> findAllEnabled() {
-        return clienteRepository.findAllEnabled();
+    public List<Cliente> findAllByEstado(Boolean estado) {
+        return clienteRepository.findAllByEstado(estado);
     }
-*/
+
     @Override
     public Cliente findByRun(String run) {
         return clienteRepository.findByRun(run);
@@ -37,7 +37,7 @@ public class ClienteServiceImpl implements ClienteService{
     }
 
     @Override
-    public Optional<Cliente> findById(Integer id) {
+    public Optional<Cliente> findById(Long id) {
         return clienteRepository.findById(id);
     }
 
